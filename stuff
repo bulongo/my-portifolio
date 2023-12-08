@@ -1,0 +1,38 @@
+       <div class="tech-stack">
+          <h3>TECH STACK</h3>
+          <ul class="skills">
+            <li><i class="fa-brands fa-html5"></i></li>
+            <li><i class="fa-brands fa-css3"></i></li>
+            <li><i class="fa-brands fa-js"></i></li>
+            <li><i class="fa-brands fa-python"></i></li>
+            <li><i class="fa-brands fa-sass"></i></li>
+            <li><i class="fa-brands fa-react"></i></li>
+            <li><i class="fa-brands fa-node"></i></li>
+            <li><i class="fa-brands fa-linux"></i></li>
+            <li><i class="fa-brands fa-git"></i></li>
+          </ul>
+        </div>
+
+        <!-- on scroll we should then expand this circle man this shit is hard -->
+        <!--<div class="name"><h1>Bulongo</h1><h1>Mukkuli</h1></div> -->
+
+burger menu here
+
+      <div class="burger__menu">
+        <ul class="burger__menu-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/work">My work</a></li>
+          <li><a href="/contact">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="burger">
+        <span class="burger__btn"></span>
+      </div>
+
+
+      <div class="arrow-div">
+        <img src="./assets/arrow2.png" alt="" class="arrow">
+        <p>reloads page</p>
+      </div>
+

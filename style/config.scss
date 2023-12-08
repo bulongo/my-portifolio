@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap');
+
+$background-color: #111;
+$text-color: #aaa;
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin transition3s {
+  transition: 0.2s ease-in-out all;
+}
+
+@mixin transition7s {
+  transition: 0.7s ease-in-out all;
+}
+
+@mixin animateDown {
+  animation: animateDown .5s linear;
+  @keyframes animateDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}
+
+@mixin animateUp {
+  animation: animateUp .5s linear;
+  @keyframes animateUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+    } 
+  }
+}
+
+@mixin bounce {
+  animation: bounce 2s infinite;
+  @keyframes bounce {
+    0% {
+      transform: translateY(30px);
+    }
+    50% {
+      transform: translateY(0);
+    } 
+    100% {
+      transform: translateY(30px); 
+    }
+  }
+}
+
+
+@mixin ping {
+  animation: ping 3s 4 linear;
+  @keyframes ping {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: #274046;
+    }
+    100% {
+      width: 350px;
+      height: 350px;
+      opacity: 0;
+      // background: none;
+    }
+  }
+}
+
+@mixin sideScrolling {
+  animation: sideScrolling .4s linear;
+  @keyframes sideScrolling {
+    0% {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header-off {
+  width: 100%;
+  color: #111;
+  height: 10vh;
+  align-items: center;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.3rem 0 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+
+.header {
+  width: 100%;
+  color: #111;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.3rem 0 1rem;
+  position: fixed;
+  top: 0;
+  animation: animateDown 0.5s linear;
+  backdrop-filter: blur(10px);
+  z-index: 11;
+}
+@keyframes animateDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.header.darkened {
+  transition: 0.2s ease-in-out all;
+}
+
+.arrow-div {
+  position: absolute;
+  width: 100px;
+  justify-content: space-around;
+  top: 10px;
+  left: 50px;
+  display: flex;
+  font-size: 0.6rem;
+}
+
+.arrow {
+  width: 20px;
+  transform: rotate(180deg);
+}
+
+#bulongo {
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+  font-size: 1.5rem;
+}
+#bulongo a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.menu_list {
+  display: flex;
+  width: 65%;
+  padding-left: 1.2rem;
+  justify-content: space-around;
+}
+.menu_list li {
+  list-style: none;
+  border-radius: 3px;
+  transition: 0.2s ease-in-out all;
+}
+.menu_list li a {
+  color: #bbb;
+  padding: 0 7px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero .cd {
+  width: 105%;
+  padding: 1rem;
+  color: #bcbcbc;
+  margin: 35px 0 0px -40px;
+  background-image: -webkit-linear-gradient(45deg, hsl(341.9, 57.1%, 68%), #33a3af);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  transform: skewY(-8deg);
+  animation: animateUp 0.5s linear;
+  z-index: -1;
+}
+@keyframes animateUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hero .creative, .hero .developer {
+  font-size: 3.1rem;
+  font-weight: 900;
+}
+.hero .intro {
+  position: absolute;
+  bottom: 2rem;
+  z-index: -1;
+}
+.hero .developer {
+  margin-left: 3rem;
+}
+.hero .bulongo {
+  width: 250px;
+  height: 250px;
+  margin-top: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  transition: 0.2s ease-in-out all;
+}
+.hero .ring {
+  position: absolute;
+  border-radius: 50%;
+  animation: animateUp 0.5s linear;
+}
+@keyframes animateUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hero .socials {
+  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 28rem;
+  padding: 1rem;
+}
+.hero .socials li:nth-child(1) {
+  transition-delay: 0.6s;
+  transition: 0.7s ease-in-out all;
+}
+.hero .socials li:nth-child(2) {
+  transition-delay: 0.7s;
+  transition: 0.7s ease-in-out all;
+}
+.hero .socials li:nth-child(3) {
+  transition-delay: 0.8s;
+  transition: 0.7s ease-in-out all;
+}
+.hero .socials li:nth-child(4) {
+  transition-delay: 0.9s;
+  transition: 0.7s ease-in-out all;
+}
+.hero .fa-brands {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+  color: #bbb;
+}
+.hero .fa-brands:hover {
+  transform: scale(1.2);
+}
+.hero .scroll-container {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  z-index: -1;
+}
+.hero .scrolling {
+  border: solid #bbb 1px;
+  opacity: 0;
+  animation: scrollingPrompt 3s infinite;
+}
+@keyframes scrollingPrompt {
+  0% {
+    padding-bottom: 0px;
+    opacity: 0;
+  }
+  50% {
+    padding-bottom: 80px;
+    opacity: 1;
+  }
+  100% {
+    padding-top: 0px;
+    opacity: 0;
+  }
+}
+
+#about {
+  opacity: 0;
+  padding: 0.8rem;
+}
+#about h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#inbound {
+  opacity: 1;
+  transition: 0.7s ease-in-out all;
+  animation: animateUp 0.5s linear;
+  padding: 0.8rem;
+}
+@keyframes animateUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#inbound h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#inbound button {
+  background: #33a3af;
+  border-radius: 6px;
+  cursor: pointer;
+  border: solid red;
+  width: 150px;
+  height: 40px;
+  border: none;
+  margin-top: 1rem;
+  transition: 0.2s ease-in-out all;
+}
+#inbound button a {
+  text-decoration: none;
+  color: #eee;
+}
+
+.ubuntu {
+  background: orangered;
+  padding: 0.2rem 0.7rem;
+  border-radius: 5px;
+  font-family: ubuntu;
+}
+.ubuntu a {
+  text-decoration: none;
+  color: #eee;
+}
+
+#projects {
+  position: relative;
+}
+#projects .workHeaderOff {
+  opacity: 0;
+}
+#projects .workHeader {
+  opacity: 1;
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: 400;
+  color: white;
+}
+#projects .workHeaderUnderLine {
+  width: 50%;
+  height: 1px;
+  margin: 1rem 0 0 6rem;
+  position: "absolute";
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6rem 0;
+  transition: 0.2s ease-in-out all;
+  cursor: pointer;
+  position: relative;
+  height: 30vh;
+}
+.project .title {
+  position: absolute;
+  display: flex;
+  font-size: 2.7rem;
+  width: 95%;
+  justify-content: space-between;
+  top: 40px;
+  z-index: -1;
+}
+.project p {
+  text-align: center;
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 600;
+  bottom: 20px;
+  z-index: -1;
+}
+.project:hover {
+  transform: scale(1.1);
+}
+
+.image {
+  width: 95%;
+  top: 15%;
+  height: 230px;
+  position: absolute;
+}
+
+body {
+  background: #536976; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #292E49, #536976); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #292E49, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #aaa;
+  max-width: 100%;
+  position: relative;
+}
+
+#canvas1 {
+  margin-top: 18rem;
+  position: absolute;
+  z-index: -2;
+  animation: showUp 6s ease-in-out;
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

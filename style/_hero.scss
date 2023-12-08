@@ -1,0 +1,132 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  // margin: 0 auto;
+  align-items: center;
+  // border: solid red;
+
+  .cd {
+    // border: solid #555 1px;
+    // background: rgba(0,0,0,0.1);
+    width: 105%;
+    padding: 1rem;
+    color: #bcbcbc;
+    // text-shadow: 0 0 1px magenta;
+    // box-shadow: 1px 1px 1px;
+    margin: 35px 0 0px -40px;
+
+  background-image: -webkit-linear-gradient(45deg,hsl(341.9,57.1,68),#33a3af);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position:relative; 
+
+    transform: skewY(-8deg);
+    @include animateUp;
+    z-index: -1;
+  }
+
+  .creative,.developer {
+    font-size: 3.1rem;
+    font-weight: 900;
+  }
+
+  .intro {
+    position: absolute;
+    bottom: 2rem;
+    z-index: -1;
+  }
+
+  .developer {
+    margin-left: 3rem;
+  }
+
+  .bulongo {
+    width: 250px;
+    height: 250px;
+    margin-top: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    @include transition3s;
+  }
+
+  .ring {
+    // border: solid white 1px;
+    position: absolute;
+    border-radius: 50%;
+    @include animateUp;
+    // @include ping;
+  }
+
+  .socials {
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 28rem;
+    padding: 1rem;
+    // border: solid red;
+    // border: solid red;
+    // width: 120%;
+    // margin-right: 250px;
+  }
+
+  // .socials li {
+  //   @include sideScrolling;
+  //   // margin-left: 2rem;
+  // }
+
+  @for $i from 1 through 4 {
+    .socials li:nth-child(#{$i}) {
+      transition-delay: ($i * 0.1s) + 0.5s;
+      // border: solid red;
+      // @include sideScrolling;
+      @include transition7s;
+    }
+  }
+
+  .fa-brands {
+    font-size: 2rem;
+    cursor: pointer;
+    @include transition3s;
+    color: #bbb;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .scroll-container {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    z-index: -1;
+  }
+
+  .scrolling {
+    border: solid #bbb 1px;
+    opacity: 0;
+    // width: .5px;
+    animation: scrollingPrompt 3s infinite;
+  }
+
+  @keyframes scrollingPrompt {
+     0% {
+      padding-bottom: 0px;
+      opacity: 0;
+    }
+    50% {
+      padding-bottom: 80px;
+      opacity: 1;
+    }
+    100% {
+      padding-top: 0px;
+      opacity: 0;
+    }
+  }
+}
+
+
